@@ -34,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['registrar'])) {
 
                 if ($insertar->execute([$usuario, $email, $password_hash])) {
                     $mensaje = "✅ Registro exitoso. Ahora puedes <a
-href='login.php'>iniciar sesión</a>.";
+href='index.php'>iniciar sesión</a>.";
                 } else {
                     $mensaje = "❌ Error al registrar el usuario.";
                 }
@@ -195,7 +195,7 @@ onclick="togglePassword()">
             </button>
 
             <div class="links">
-                <a href="login.php"><i class="fas fa-sign-in-alt"></i>
+                <a href="index.php"><i class="fas fa-sign-in-alt"></i>
 Ya tengo cuenta</a>
                 <a href="index.php"><i class="fas fa-home"></i> Inicio</a>
             </div>

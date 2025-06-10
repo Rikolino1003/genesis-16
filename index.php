@@ -163,20 +163,31 @@ try {
 </section>
 
     <!-- Modal de Login -->
-    <div id="modalLogin" class="modal">
-        <div class="modal-content login-container">
-            <span class="close" onclick="cerrarModal()">&times;</span>
-            
-            <!-- Mensajes de error -->
-            <?php if (isset($_SESSION['error'])): ?>
-                <div class="alert alert-danger">
-                    <i class="fas fa-exclamation-circle"></i>
-                    <?php 
-                    echo $_SESSION['error'];
-                    unset($_SESSION['error']);
-                    ?>
-                </div>
-            <?php endif; ?>
+<!-- Modal de Login -->
+<div id="modalLogin" class="modal">
+    <div class="modal-content login-container">
+        <span class="close" onclick="cerrarModal()">&times;</span>
+        
+        <!-- Mensajes de error y éxito -->
+        <?php if (isset($_SESSION['error'])): ?>
+            <div class="alert alert-danger">
+                <i class="fas fa-exclamation-circle"></i>
+                <?php 
+                echo $_SESSION['error'];
+                unset($_SESSION['error']);
+                ?>
+            </div>
+        <?php endif; ?>
+
+        <?php if (isset($_SESSION['mensaje'])): ?>
+            <div class="alert alert-success">
+                <i class="fas fa-check-circle"></i>
+                <?php 
+                echo $_SESSION['mensaje'];
+                unset($_SESSION['mensaje']);
+                ?>
+            </div>
+        <?php endif; ?>
 
             <!-- Formulario de login -->
             <form method="POST" action="procesar_login.php" class="form-card">
@@ -207,6 +218,7 @@ try {
                 <button type="submit" class="btn-login">
                     <i class="fas fa-sign-in-alt"></i> Iniciar Sesión
                 </button>
+                
 
                 <!-- Enlaces adicionales -->
                 <div class="register-link">

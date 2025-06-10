@@ -1,12 +1,12 @@
 <?php
 session_start();
+require_once 'conexion.php';
 
-// Verificar si el usuario está autenticado y es administrador
-if (!isset($_SESSION['usuario']) || $_SESSION['rol'] != 'admin') {
-    die('Acceso denegado');
+// Verificar si el usuario está logueado y es admin
+if (!isset($_SESSION['usuario']) || $_SESSION['rol'] !== 'admin') {
+    header('Location: index.php');
+    exit();
 }
-
-include 'conexion.php';
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -14,6 +14,7 @@ include 'conexion.php';
     <meta charset="UTF-8">
     <title>Admin - CRUD</title>
     <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
     <header>
