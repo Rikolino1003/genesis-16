@@ -1,0 +1,242 @@
+/* Sistema de variables CSS para mantener consistencia en colores */
+/* Estas variables pueden ser reutilizadas en todo el archivo */
+:root {
+    --primary: #2563eb;    /* Color principal - azul */
+    --primary-dark: #1d4ed8; /* Versión oscura del color principal para hover */
+    --secondary: #4f46e5;  /* Color secundario para gradientes */
+    --text-dark: #1e293b;  /* Color oscuro para textos principales */
+    --text-light: #64748b; /* Color claro para textos secundarios */
+    --white: #ffffff;      /* Color blanco puro */
+    --error: #dc2626;      /* Color rojo para errores */
+    --success: #16a34a;    /* Color verde para éxitos */
+}
+
+/* Reset CSS - Elimina márgenes y padding predeterminados */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Incluye padding en el cálculo del ancho */
+}
+
+/* Configuración del cuerpo de la página */
+body {
+    font-family: 'Poppins', sans-serif; /* Fuente moderna y limpia */
+    min-height: 100vh; /* Altura mínima de toda la ventana */
+    display: flex; /* Habilita flexbox */
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%); /* Gradiente de fondo */
+    padding: 2rem; /* Espacio alrededor del contenedor */
+}
+
+/* Estilo del contenedor principal del formulario */
+.login-container {
+    width: 100%;
+    max-width: 480px; /* Ancho máximo para mantener legibilidad */
+    background: rgba(255, 255, 255, 0.95); /* Fondo semi-transparente */
+    border-radius: 20px; /* Bordes redondeados */
+    padding: 3rem 2rem; /* Espaciado interior */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    backdrop-filter: blur(10px); /* Efecto de desenfoque en el fondo */
+}
+
+/* Configuración del contenedor del logo */
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem; /* Espacio entre el logo y el texto */
+    margin-bottom: 1.5rem;
+}
+
+/* Color del icono del logo */
+.logo-container i {
+    color: var(--primary);
+}
+
+/* Estilos del título principal */
+header h1 {
+    color: var(--text-dark);
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+/* Estilo del subtítulo */
+.subtitle {
+    color: var(--text-light);
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+/* Estilos de los grupos de campos del formulario */
+.form-group {
+    margin-bottom: 1.5rem; /* Separación entre campos */
+}
+
+/* Estilos de las etiquetas de los campos */
+label {
+    display: block;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+/* Estilos de los iconos en las etiquetas */
+label i {
+    margin-right: 0.5rem;
+    color: var(--primary);
+}
+
+/* Estilos de los campos de entrada */
+input {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    font-size: 1rem;
+    transition: all 0.3s ease; /* Animación suave */
+}
+
+/* Estado activo de los campos de entrada */
+input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1); /* Resplandor al focus */
+    outline: none;
+}
+
+/* Contenedor del campo de contraseña */
+.password-wrapper {
+    position: relative; /* Para posicionar el botón de mostrar/ocultar */
+}
+
+/* Botón para mostrar/ocultar contraseña */
+.toggle-password {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%); /* Centra verticalmente */
+    background: none;
+    border: none;
+    color: var(--text-light);
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+/* Efecto hover del botón mostrar/ocultar */
+.toggle-password:hover {
+    color: var(--primary);
+}
+
+/* Contenedor de opciones adicionales */
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1.5rem 0;
+}
+
+/* Estilo del checkbox recordar */
+.remember-me {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Enlace de recuperación de contraseña */
+.forgot-link {
+    color: var(--primary);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+/* Efecto hover del enlace */
+.forgot-link:hover {
+    color: var(--primary-dark);
+    text-decoration: underline;
+}
+
+/* Estilo del botón principal */
+.btn-login {
+    width: 100%;
+    padding: 1rem;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    color: var(--white);
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Efecto hover del botón principal */
+.btn-login:hover {
+    transform: translateY(-2px); /* Efecto de elevación */
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.2); /* Sombra al hover */
+}
+
+/* Icono dentro del botón */
+.btn-login i {
+    margin-right: 0.5rem;
+}
+
+/* Enlace de registro nuevo usuario */
+.register-link {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+/* Estilo del enlace de registro */
+.register-link a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* Efecto hover del enlace de registro */
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos de las alertas */
+.alert {
+    padding: 1rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Estilo específico para alertas de error */
+.alert-danger {
+    background-color: #fef2f2; /* Fondo rojo suave */
+    color: var(--error);
+    border: 2px solid #fecaca;
+}
+
+/* Estilos del pie de página */
+footer {
+    text-align: center;
+    margin-top: 2rem;
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+/* Ajustes responsive para pantallas pequeñas */
+@media (max-width: 480px) {
+    .login-container {
+        padding: 2rem 1.5rem; /* Reduce el padding en móviles */
+    }
+    
+    .form-options {
+        flex-direction: column; /* Apila elementos en vertical */
+        gap: 1rem;
+        align-items: flex-start;
+    }
+}

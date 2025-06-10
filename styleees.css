@@ -1,0 +1,116 @@
+/* ====== General ====== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f3f4f6;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* ====== Encabezado ====== */
+  .header-usuario {
+    background-color: #2563eb;
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+    border-bottom: 4px solid #1d4ed8;
+    border-radius: 0 0 12px 12px;
+  }
+  
+  .header-usuario h1 {
+    font-size: 2rem;
+  }
+  
+  .subtitulo {
+    font-size: 1rem;
+    color: #e0e7ff;
+    margin-top: 0.5rem;
+  }
+  
+  /* ====== Contenido Principal ====== */
+  .usuario-contenido {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  }
+  
+  .usuario-contenido section {
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+  
+  .usuario-contenido h2 {
+    color: #2563eb;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .usuario-contenido p {
+    font-size: 1.1rem;
+    color: #444;
+    margin-bottom: 1rem;
+  }
+  
+  .usuario-contenido img {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  /* ====== Lista de Especialidades ====== */
+  .especialidades ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+  }
+  
+  .especialidades li {
+    font-size: 1.1rem;
+    margin-bottom: 0.7rem;
+    color: #333;
+  }
+  
+  .especialidades i {
+    color: #22c55e;
+    margin-right: 10px;
+  }
+  
+  /* ====== Botón de volver ====== */
+  .btn-volver {
+    display: inline-block;
+    background-color: #2563eb;
+    color: white;
+    padding: 0.7rem 1.4rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-volver:hover {
+    background-color: #1d4ed8;
+  }
+  
+  .volver-btn {
+    text-align: center;
+  }
+  
+  /* ====== Pie de página ====== */
+  .footer {
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    color: #888;
+    margin-top: 3rem;
+  }
+  
